@@ -1,0 +1,66 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Adjust font size for responsiveness */
+    color: #555;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px; /* Limits the width for larger screens */
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    footer {
+        font-size: 0.9em; /* Adjust footer text size */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em; /* Further reduce font size for very small screens */
+    }
+
+    section {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    footer {
+        font-size: 0.8em; /* Adjust footer text size for very small screens */
+    }
+}

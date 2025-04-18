@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serrany Styles</title>
+    <link rel="stylesheet" href="Moree.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="text">
+    <h1>More Of Our Projects</h1>
+    <h2>Click For Fullscreen</h2>
+    </div>
+    <div class="explore">
+        <h1></h1>
+        <br><br>
+        <p></p>
+        <div class="horizontal-navs">
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/1.png" alt="Place 1" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/2.jpg" alt="Place 2" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/3.avif" alt="Place 3" class="explore-image">
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navs">
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/6.jpg" alt="Place 4" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/5.webp" alt="Place 5" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/7.jpg" alt="Place 6" class="explore-image">
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navs">
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/8.jpg" alt="Place 4" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/10.jpg" alt="Place 5" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/11.jpg" alt="Place 6" class="explore-image">
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navs">
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/13.webp" alt="Place 1" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/19.jpg" alt="Place 2" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/15.webp" alt="Place 3" class="explore-image">
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navs">
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/17.webp" alt="Place 4" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/18.jpg" alt="Place 5" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/20.jpg" alt="Place 6" class="explore-image">
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-navs">
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/21.jpg" alt="Place 4" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/22.jpg" alt="Place 5" class="explore-image">
+                </div>
+            </div>
+            <div class="nav-item">
+                <div class="image-container">
+                    <img src="Assets/23.jpg" alt="Place 6" class="explore-image">
+                </div>
+            </div>
+    </div>
+
+    <div class="but">
+        <button>
+            <i class="fas fa-arrow-left"></i> 
+            <a href="index.html">Go Back Home</a>
+        </button>
+    </div>
+
+    <!-- Fullscreen Modal -->
+    <div id="fullscreen-modal" class="fullscreen-modal">
+        <span class="close-modal">&times;</span>
+        <img class="fullscreen-image" id="fullscreen-image" src="" alt="Fullscreen">
+    </div>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('fullscreen-modal');
+        const fullscreenImage = document.getElementById('fullscreen-image');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Add click event to all images
+        document.querySelectorAll('.explore-image').forEach(image => {
+            image.addEventListener('click', () => {
+                fullscreenImage.src = image.src; // Set the clicked image as the fullscreen image
+                modal.style.display = 'flex'; // Show the modal
+            });
+        });
+
+        // Close the modal when the close button is clicked
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close the modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

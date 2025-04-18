@@ -1,0 +1,430 @@
+h1{
+    color: #4CAF50;
+    font-size: 50px;
+    text-align: center;
+}
+
+.text h2{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.explore{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 200px;
+}
+
+.explore a{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+/* Ensure the horizontal-navs section has a lower z-index */
+.horizontal-navs {
+    display: flex;
+    justify-content: space-around; /* Space out the nav items evenly */
+    align-items: center; /* Align items vertically */
+    margin: 20px 0; /* Add some vertical spacing */
+    padding: 10px;
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    position: relative; /* Default positioning */
+    z-index: 1; /* Lower z-index value */
+}
+
+.nav-item {
+    text-align: left; /* Align the content (image and text) to the left */
+}
+
+.nav-item .image-container img {
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 0 auto 10px 0; /* Add spacing below the image and align it to the left */
+    width: 500px; /* Set a fixed width for all images */
+    height: 500px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop the image to fit the container */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    border: 3px solid #ccc; /* Add a square border */
+    padding: 10px; /* Add padding inside the border */
+    border-radius: 0; /* Ensure the border is square (no rounded corners) */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px; /* Add spacing between elements */
+}
+
+.nav-item p .profile-pic {
+    width: 40px; /* Set the profile picture width */
+    height: 40px; /* Set the profile picture height */
+    border-radius: 50%; /* Make the profile picture circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Adjust width to fit inside the image */
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.overlay p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.status.open {
+    background-color: #28a745; /* Green for open */
+    color: #fff;
+}
+
+.status.closed {
+    background-color: #dc3545; /* Red for closed */
+    color: #fff;
+}
+
+/* Fullscreen Modal Styles */
+.fullscreen-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure it appears above other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+/* Navigation Bar Styles */
+.main-nav {
+    background-color: #333; /* Dark background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding for spacing */
+    position: fixed; /* Fix the nav at the top */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align the logo and text */
+    gap: 10px; /* Add spacing between the logo and text */
+}
+
+.logo-image {
+    width: 40px; /* Set the width of the logo */
+    height: 40px; /* Set the height of the logo */
+    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+}
+
+.logo h1 {
+    font-size: 1.5rem; /* Adjust logo font size */
+    color: #4CAF50; /* Green color for the logo */
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+    gap: 20px; /* Add spacing between links */
+    padding: 0;
+    margin-left: -80px; /* Move the links slightly to the left */
+}
+
+.nav-links li {
+    position: relative; /* For hover effects */
+    
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    font-size: 1rem; /* Adjust font size */
+    padding: 5px 10px; /* Add padding for clickable area */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    color: #4CAF50; /* Change text color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Add underline effect on hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50; /* Green underline */
+    transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Responsive Navigation for Smaller Devices */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        background-color: #333; /* Same background as nav */
+        position: absolute;
+        top: 50px; /* Below the nav bar */
+        right: 0;
+        width: 100%; /* Full width */
+        display: none; /* Hide by default */
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .nav-links li {
+        text-align: center; /* Center-align links */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* General Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust heading sizes */
+    h1 {
+        font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .text h2 {
+        font-size: 1.5rem; /* Adjust subheading size */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Explore Section */
+    .explore {
+        margin-bottom: 100px; /* Reduce bottom margin */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .explore a {
+        font-size: 1.2rem; /* Adjust link size */
+    }
+
+    /* Horizontal Navs */
+    .horizontal-navs {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 20px; /* Add spacing between nav items */
+        margin-bottom: 30px; /* Add spacing between nav sections */
+    }
+
+    .nav-item {
+        text-align: center; /* Center-align content */
+    }
+
+    .nav-item .image-container img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300px; /* Limit maximum width */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .nav-item p {
+        font-size: 0.9rem; /* Adjust text size */
+        padding: 5px; /* Reduce padding */
+    }
+
+    /* Fullscreen Modal */
+    .fullscreen-modal img {
+        max-width: 80%; /* Adjust fullscreen image size */
+        max-height: 80%;
+    }
+
+    .close-modal {
+        font-size: 1.5rem; /* Adjust close button size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    h1 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .text h2 {
+        font-size: 1.2rem; /* Further reduce subheading size */
+    }
+
+    .explore {
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .horizontal-navs {
+        gap: 15px; /* Reduce spacing between nav items */
+    }
+
+    .nav-item .image-container img {
+        max-width: 250px; /* Further limit maximum width */
+    }
+
+    .nav-item p {
+        font-size: 0.8rem; /* Further reduce text size */
+    }
+
+    .fullscreen-modal img {
+        max-width: 90%; /* Adjust fullscreen image size */
+        max-height: 90%;
+    }
+
+    .close-modal {
+        font-size: 1.2rem; /* Further reduce close button size */
+    }
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 1200px) {
+    .horizontal-navs .image-container img {
+        width: 300px; /* Reduce the width of the images */
+        height: 400px; /* Reduce the height of the images */
+        object-fit: cover; /* Ensure the images maintain their aspect ratio */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+
+    .horizontal-navs {
+        gap: 30px; /* Add spacing between nav items */
+        justify-content: center; /* Center the nav items */
+    }
+}
+
+.but {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Add some spacing above the button */
+}
+
+.but button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 1rem; /* Adjust font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Make text uppercase */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center-align icon and text */
+    gap: 10px; /* Add space between icon and text */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+    margin-top: 50px;
+}
+
+.but button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.but button a {
+    color: white; /* Ensure link text is white */
+    text-decoration: none; /* Remove underline from link */
+    font-weight: bold; /* Make the text bold */
+}
+
+.but button i {
+    font-size: 1.2rem; /* Adjust icon size */
+}

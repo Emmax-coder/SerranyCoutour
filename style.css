@@ -1,0 +1,1110 @@
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('Assets/Cloth1.jpg') no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+    margin-bottom: 150px; /* Add space below the .main section */
+}
+
+body{
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.head{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 120px; /* Add margin to account for the nav height */
+    padding-right: 20px;
+}
+
+/* General Navigation Styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation Bar Links Styling */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display links in a row */
+    gap: 20px; /* Add spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 70px; /* Add horizontal spacing between list items */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set link text color */
+    font-size: 1rem; /* Adjust font size */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    background-color: #4CAF50; /* Highlight background on hover */
+    color: white; /* Ensure text remains white on hover */
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 70px;
+    margin-top: 10px;
+}
+
+/* Default: Hide .logo h1 on larger devices */
+.logo h1 {
+    display: none; /* Hide by default */
+}
+
+/* Show .logo h1 only on smaller devices */
+@media (max-width: 768px) {
+    .logo h1 {
+        display: block; /* Show on smaller devices */
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        margin-left: 10px; /* Add some spacing from the left */
+        color: #fff; /* Optional: Adjust text color */
+        margin-top: 30px;
+    }
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%; /* Make the menu take the full width of the screen */
+        background-color: #fff; /* Background color for the menu */
+        padding: 20px 0; /* Add padding for spacing */
+        border-radius: 0; /* Remove rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+        z-index: 1000; /* Ensure it appears above other elements */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Add vertical spacing between links */
+        text-align: center; /* Center-align the links */
+    }
+
+    .nav-links li a {
+        color: #333; /* Link text color */
+        text-decoration: none; /* Remove underline */
+        font-size: 1.2rem; /* Adjust font size */
+        padding: 10px 20px; /* Add padding for clickable area */
+        display: block; /* Ensure links take full width */
+        transition: background-color 0.3s ease; /* Smooth hover effect */
+    }
+
+    .nav-links li a:hover {
+        background-color: #444; /* Highlight background on hover */
+        color: #f39c12; /* Highlight text color on hover */
+    }
+
+    .horizontal-navs .image-container img {
+        width: 100%; /* Ensure the image takes full width of its container */
+        height: 200px; /* Set a fixed height for consistency */
+        object-fit: cover; /* Crop the image to fit the container */
+        border-radius: 5px; /* Optional: Add rounded corners */
+    }
+
+    .logo {
+        text-align: left; /* Align the logo to the left */
+        margin-left: 10px; /* Add some spacing from the left edge */
+    }
+
+    .nav-container {
+        flex-direction: row; /* Ensure the nav container remains in a row */
+    }
+}
+
+ul li{
+    float: left;
+    list-style-type: none;
+    margin: 0 100px; /* Add horizontal space between links */
+    padding: 14px 16px;
+    padding-left: 110px;
+    margin-top: 10px;
+}
+
+ul li a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace; 
+    transition: background-color 0.3s;  
+    
+}
+
+.marquee {
+    margin-top: 80px; /* Push it below the fixed nav */
+    color: #333;
+    background-color: #fff;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icons i {
+    font-size: 50px;
+    color: #fff;
+    margin: 0 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+    color: #f39c12;
+}
+
+.work {
+    margin-top: 50px; /* Add space above the .work section */
+}
+
+.activities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items horizontally */
+    margin-top: 20px;
+}
+
+.activity {
+    text-align: center;
+    border: 2px solid #ccc; /* Add border around each icon */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    width: 400px; /* Set a fixed width for consistency */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.activity i {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.activity p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.services {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-item img {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.service-item .service-text {
+    flex: 1;
+    text-align: left;
+}
+
+.service-item .service-text h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-item .service-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.service-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.service {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-card {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.explore{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 200px;
+}
+
+.explore a{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.explore p{
+    font-size: 20px;
+    top: 0px;
+    font-weight: bold;
+}
+
+/* Ensure the horizontal-navs section has a lower z-index */
+.horizontal-navs {
+    display: flex;
+    justify-content: space-around; /* Space out the nav items evenly */
+    align-items: center; /* Align items vertically */
+    margin: 20px 0; /* Add some vertical spacing */
+    padding: 10px;
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    position: relative; /* Default positioning */
+    z-index: 1; /* Lower z-index value */
+}
+
+.nav-item {
+    text-align: left; /* Align the content (image and text) to the left */
+}
+
+.nav-item .image-container img {
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 0 auto 10px 0; /* Add spacing below the image and align it to the left */
+    width: 500px; /* Set a fixed width for all images */
+    height: 500px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop the image to fit the container */
+    border-radius: 5px; /* Optional: Add rounded corners to the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    border: 3px solid #ccc; /* Add a square border */
+    padding: 10px; /* Add padding inside the border */
+    border-radius: 0; /* Ensure the border is square (no rounded corners) */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px; /* Add spacing between elements */
+}
+
+.nav-item p .profile-pic {
+    width: 40px; /* Set the profile picture width */
+    height: 40px; /* Set the profile picture height */
+    border-radius: 50%; /* Make the profile picture circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Adjust width to fit inside the image */
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.overlay p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.status.open {
+    background-color: #28a745; /* Green for open */
+    color: #fff;
+}
+
+.status.closed {
+    background-color: #dc3545; /* Red for closed */
+    color: #fff;
+}
+
+/* Style for the icon-actions container */
+.icon-actions {
+    display: flex;
+    gap: 15px; /* Space between the icons */
+    justify-content: flex-end; /* Align icons to the right */
+    margin-top: 10px; /* Add spacing above the icons */
+}
+
+/* General styles for the icons */
+.icon-actions i {
+    font-size: 24px; /* Set the size of the icons */
+    color: #555; /* Default color for the icons */
+    background-color: rgba(0, 0, 0, 0.1); /* Light background for the icons */
+    padding: 10px; /* Add padding around the icons */
+    border-radius: 50%; /* Make the icons circular */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the icons */
+.icon-actions i:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    background-color: rgba(0, 0, 0, 0.2); /* Darken the background on hover */
+}
+
+/* Styles for the heart icon when clicked */
+.heart-icon.clicked {
+    color: pink; /* Change the heart icon to pink */
+    background-color: rgba(255, 192, 203, 0.2); /* Light pink background */
+}
+
+/* Styles for the location icon when clicked */
+.location-icon.clicked {
+    color: yellow; /* Change the location icon to yellow */
+    background-color: rgba(255, 255, 0, 0.2); /* Light yellow background */
+}
+
+/* Fullscreen Modal Styles */
+.fullscreen-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure it appears above other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+/* Style for the "See More" button */
+.see-more-btn {
+    background-color: #f39c12; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 4px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Make text uppercase */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+.see-more-btn:hover {
+    background-color: #e67e22; /* Darker background on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.see-more-btn a {
+    color: white; /* Ensure link text is white */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.client{
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    font-family: arial;
+    text-align: center;
+    margin-top: 180px;
+}
+
+.client a{
+    font-size: 15px;
+    font-weight: normal;
+    font-family: cursive;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between each review nav */
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between profile picture and content */
+    padding: 15px;
+    border: 2px solid #ccc; /* Add a border around each nav */
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-nav img.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the profile picture circular */
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between name, location, and stars */
+}
+
+.review-content strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.review-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.stars {
+    display: flex;
+    gap: 5px; /* Space between stars */
+}
+
+.stars i {
+    color: #f39c12; /* Gold color for stars */
+    font-size: 16px;
+}
+
+.choose {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background color */
+    border-top: 2px solid #ddd; /* Subtle border at the top */
+}
+
+.choose h2 {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 30px;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+}
+
+.choose-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.choose-card i {
+    font-size: 40px;
+    color: #ff6f61; /* Bright orange for icons */
+    margin-bottom: 15px;
+}
+
+.choose-card h3 {
+    font-size: 1.5rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.choose-card p {
+    font-size: 1rem;
+    color: #555; /* Neutral text color */
+    line-height: 1.5;
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #333;
+    padding: 20px;
+}
+
+footer p {
+    padding-top: 10px;
+    font-size: 2.5rem; /* Use relative font size for responsiveness */
+    text-align: left;
+    padding-left: 20px;
+}
+
+footer a {
+    font-size: 1.5rem;
+}
+
+.footer-icons {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+}
+
+.footer-icons a {
+    font-size: 2.5rem; /* Increase the size of the icons */
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-icons .whatsapp {
+    color: white; /* WhatsApp green color */
+    font-size: 2.5rem; /* Increase the size of the WhatsApp icon */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-icons .whatsapp:hover {
+    color: green; /* Slightly darker green on hover */
+}
+
+.fb:hover{
+    color: blue;
+}
+
+.twit:hover{
+    color: black;
+}
+
+.lin:hover{
+    color: lightblue;
+}
+
+.insta:hover {
+    animation: colorChange 1s infinite alternate; /* Apply animation */
+}
+
+@keyframes colorChange {
+    50% {
+        color: purple;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.footer-links {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.5rem;
+    color: #ccc; /* Light gray text color */
+}
+
+.footer-links a {
+    color: #ccc; /* Default link color */
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+.icon {
+    font-size: 40px;
+    color: #ff6f61;
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Navigation Bar */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add vertical spacing between links */
+        padding: 10px;
+    }
+
+    /* Marquee */
+    .marquee {
+        font-size: 1rem; /* Reduce font size */
+        padding: 5px;
+    }
+
+    /* Head Section */
+    .head h1 {
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    /* Icons Section */
+    .icons i {
+        font-size: 2rem; /* Reduce icon size */
+        margin: 10px;
+    }
+
+    /* Activities Section */
+    .activities {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 20px;
+    }
+
+    .activity {
+        width: 100%; /* Make activities take full width */
+    }
+
+    /* Services Section */
+    .service-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack service cards vertically */
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 100%; /* Make service cards take full width */
+    }
+
+    /* Explore Section */
+    .horizontal-navs {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    .nav-item .image-container img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* See More Button */
+    .see-more-btn {
+        width: 80%; /* Make the button take most of the screen width */
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    /* Client Reviews Section */
+    .review-section {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack reviews vertically */
+        gap: 20px;
+    }
+
+    .review-nav {
+        flex-direction: column; /* Stack profile picture and content vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 80px; /* Reduce profile picture size */
+        height: 80px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .footer-icons {
+        position: static; /* Remove absolute positioning */
+        margin-top: 10px; /* Add spacing above the icons */
+        display: flex;
+        justify-content: center; /* Center the icons */
+        gap: 15px; /* Add space between icons */
+    }
+
+    .footer-links {
+        position: static; /* Remove absolute positioning */
+        margin-top: 10px; /* Add spacing above the links */
+        text-align: center; /* Center the links */
+        font-size: 0.8rem; /* Adjust font size */
+    }
+
+    .footer-icons a {
+        font-size: 1.5rem; /* Adjust icon size */
+        margin: 0 5px; /* Add spacing between icons */
+    }
+
+    .footer-icons .whatsapp {
+        font-size: 1.5rem; /* Match the size of other icons */
+    }
+
+    footer p {
+        font-size: 50px; /* Adjust footer text size */
+        margin-bottom: 10px; /* Add spacing below the text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .head h1 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    .icons i {
+        font-size: 1.5rem; /* Further reduce icon size */
+    }
+
+    .service-card {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .nav-item .image-container img {
+        height: auto; /* Ensure images maintain aspect ratio */
+    }
+
+    .see-more-btn {
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .review-nav {
+        gap: 10px; /* Reduce spacing between elements */
+    }
+
+    .profile-pic {
+        width: 60px; /* Further reduce profile picture size */
+        height: 60px;
+    }
+
+    .footer-icons a {
+        font-size: 1.2rem; /* Further reduce icon size */
+    }
+
+    .footer-icons .whatsapp {
+        font-size: 1.2rem; /* Match the size of other icons */
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .footer-icons {
+        flex-wrap: wrap; /* Allow icons to wrap to the next line if needed */
+        gap: 10px; /* Reduce spacing between icons */
+    }
+
+    .footer-links {
+        font-size: 0.7rem; /* Further reduce font size */
+        margin-top: 5px; /* Reduce spacing above the links */
+    }
+
+    .footer-icons a {
+        font-size: 1.2rem; /* Further reduce icon size */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Adjust footer text size */
+        margin-bottom: 5px; /* Reduce spacing below the text */
+    }
+
+    .horizontal-navs .image-container img {
+        width: 100%; /* Ensure the image takes full width of its container */
+        height: 150px; /* Reduce height for very small screens */
+        object-fit: cover; /* Crop the image to fit the container */
+        border-radius: 5px; /* Optional: Add rounded corners */
+    }
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 1200px) {
+    .work {
+        max-width: 100%;
+        margin: 0 auto; /* Center the section */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    .work h2 {
+        font-size: 2rem; /* Reduce heading size */
+        margin-bottom: 10px; /* Add spacing below the heading */
+    }
+
+    .work h3 {
+        font-size: 1.5rem; /* Reduce subheading size */
+        margin-bottom: 20px; /* Add spacing below the subheading */
+    }
+
+    .activities {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Display 3 items per row */
+        gap: 20px; /* Add spacing between items */
+        justify-items: center; /* Center items horizontally */
+    }
+
+    .activity {
+        font-size: 1rem; /* Adjust font size for smaller text */
+        width: 300px;
+        text-align: center; /* Center-align the content */
+    }
+
+    .activity i {
+        font-size: 2.5rem; /* Adjust icon size */
+        margin-bottom: 10px; /* Add spacing below the icon */
+    }
+
+    .activity p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .horizontal-navs .image-container img {
+        width: 300px; /* Reduce the width of the images */
+        height: 400px; /* Reduce the height of the images */
+        object-fit: cover; /* Ensure the images maintain their aspect ratio */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    }
+
+    .horizontal-navs {
+        gap: 50px; /* Add spacing between nav items */
+        justify-content: center; /* Center the nav items */
+    }
+}
+
+.touch {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    border-top: 2px solid #ddd; /* Subtle border at the top */
+    margin-top: 40px;
+}
+
+.touch h2 {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 20px;
+}
+
+.touch p {
+    font-size: 1rem;
+    color: #555; /* Neutral text color */
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.touch-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.touch-form input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Fixed width for the input field */
+    max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.touch-form input:focus {
+    border-color: #ff6f61; /* Bright orange border on focus */
+}
+
+.touch-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6f61; /* Bright orange background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.touch-form button:hover {
+    background-color: #e55a4e; /* Slightly darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.touch-form button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
